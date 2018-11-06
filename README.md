@@ -21,15 +21,16 @@ $ docker run -it --rm -v $(pwd):/home/working -w /home/working chrishah/busco-do
 Example for assessing metazoan genome (genome is in file `./genome.fasta`):
 ```bash
 #download metazoa reference set
-wget -qO- https://busco.ezlab.org/datasets/metazoa_odb9.tar.gz | tar -xvz
+$ wget -qO- https://busco.ezlab.org/datasets/metazoa_odb9.tar.gz | tar -xvz
 
 #run BUSCO
-docker run -it --rm -v $(pwd):/home/working -w /home/working chrishah/busco-docker run_BUSCO.py --in ./genome.fasta --out genome.BUSCO -l ./metazoa_odb9 --mode genome
+$ docker run -it --rm -v $(pwd):/home/working -w /home/working chrishah/busco-docker run_BUSCO.py \
+--in ./genome.fasta --out genome.BUSCO -l ./metazoa_odb9 --mode genome
 ```
 
 You can also enter the container environment and work within it. All executables, e.g. `run_BUSCO.py`, `generate_plots.py`, are in the `PATH`.
 ```bash
-docker run -it --rm --net=host -v $(pwd):/home/working -w /home/working chrishah/busco-docker /bin/bash
+$ docker run -it --rm --net=host -v $(pwd):/home/working -w /home/working chrishah/busco-docker /bin/bash
 ```
 
 
