@@ -8,8 +8,8 @@ In detail, the image is set up with:
  - Python 3.6.6
  - blast 2.6.0
  - hmmer 3.1b2
- - Augustus 3.3
- - BUSCO 3.0.2
+ - Augustus 3.3.2
+ - BUSCO 3.1.0
  - R 3.4.4
    - ggplot2 3.1.0
 
